@@ -4,8 +4,7 @@ using namespace std;
 struct Node{
     int value;
     Node *next;
-    Node *front;
-    Node *back;
+ 
 };
 class Queue{
     Node *front;
