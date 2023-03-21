@@ -19,9 +19,9 @@ public:Queue(){
     void enqueue(int data) {
         Node* newNode = new Node;
         newNode->value = data;
-        newNode->next = NULL;
+        newNode->next = nullptr;
 
-        if (front == NULL) {
+        if (front == nullptr) {
             front = newNode;
             back = newNode;
         } else {
