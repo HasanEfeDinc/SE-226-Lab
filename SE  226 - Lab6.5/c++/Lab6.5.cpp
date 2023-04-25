@@ -5,9 +5,9 @@
 using namespace std;
 //----------------------------------------------------------------------
 //Q1
-vector<int> common_elements(const vector<int>& list1, const vector<int>& list2) {
+vector<int> common_elements(const vector<int> list1, const vector<int> list2) {
     vector<int> result;
-    for (const int& element : list1) {
+    for (const int element : list1) {
         if (find(list2.begin(), list2.end(), element) != list2.end()) {
             result.push_back(element);
         }
@@ -16,13 +16,13 @@ vector<int> common_elements(const vector<int>& list1, const vector<int>& list2) 
 }
 //----------------------------------------------------------------------
 //Q2
-bool is_palindrome(const string& s) {
+bool is_palindrome(const string s) {
     return equal(s.begin(), s.end(), s.rbegin());
 }
 
-vector<string> find_palindromes(const vector<string>& strings) {
+vector<string> find_palindromes(const vector<string> strings) {
     vector<string> palindromes;
-    for (const string& string : strings) {
+    for (const string string : strings) {
         if (is_palindrome(string)) {
             palindromes.push_back(string);
         }
@@ -53,7 +53,7 @@ vector<int> sieve_of_eratosthenes(vector<int> input_list) {
 }
 //----------------------------------------------------------------------
 //Q4
-string to_lower_and_remove_spaces(const string& input) {
+string to_lower_and_remove_spaces(const string input) {
     string result;
     for (char c : input) {
         if (c != ' ' && c != '\t') {
@@ -63,13 +63,13 @@ string to_lower_and_remove_spaces(const string& input) {
     return result;
 }
 
-vector<string> anagrams(const string& word, const vector<string>& word_list) {
+vector<string> anagrams(const string word, const vector<string> word_list) {
     string sorted_word = to_lower_and_remove_spaces(word);
     sort(sorted_word.begin(), sorted_word.end());
 
     vector<string> anagram_list;
 
-    for (const string& element : word_list) {
+    for (const string element : word_list) {
         string data = to_lower_and_remove_spaces(element);
         sort(data.begin(), data.end());
 
