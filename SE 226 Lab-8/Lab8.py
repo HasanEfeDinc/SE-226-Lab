@@ -5,7 +5,7 @@ from collections import Counter
 
 
 class abstract_class(ABC):
-    adress = "C:\\Users\\ekmek\\OneDrive\\Masaüstü\\Serbest Kod\\SE-226\\Lab8\\LAB8\\weirdWords.txt"
+    adress = "weirdWords.txt"
     def __init__(self, adress):
         self.adress = adress
 
@@ -42,8 +42,8 @@ class DictCount(abstract_class):
                             freqs[char] = 1
         print(freqs)
 #Q4
-list_counter = ListCount("C:\\Users\\ekmek\\OneDrive\\Masaüstü\\Serbest Kod\\SE-226\\Lab8\\LAB8\\weirdWords.txt")
+list_counter = ListCount("weirdWords.txt")
 list_counter.calculateFreqs()
 
-dict_counter = DictCount("C:\\Users\\ekmek\\OneDrive\\Masaüstü\\Serbest Kod\\SE-226\\Lab8\\LAB8\\weirdWords.txt")
+dict_counter = DictCount("weirdWords.txt")
 dict_counter.calculateFreqs()
