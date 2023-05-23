@@ -52,13 +52,13 @@ def add_to_database():
 def list_all():
     cursor.execute("SELECT * FROM marvelmovies")
     result = cursor.fetchall()
-    text_box.delete('1.0', tk.END)  # clear the textbox
+    text_box.delete('1.0', tk.END)  #for clearing the textbox
     for row in result:
         text_box.insert(tk.END, str(row) + "\n")
 
 root = tk.Tk()
 
-text_box = tk.Text(root, width=100)  # use Text widget instead of Entry
+text_box = tk.Text(root, width=100)  
 text_box.pack()
 
 button1 = tk.Button(root, text="Add", command=add_to_database)
